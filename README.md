@@ -1,7 +1,28 @@
-# httping
+# httping-proxy
+
+**this is a fork of [pjperez/httping/](https://github.com/pjperez/httping/)** It adds support for proxies and other useful features.
+
 httping - A tool to measure RTT on HTTP/S requests 
 
 This tool should be able to run on Windows, Linux and Mac OS/X, but it has only been tested in Windows 10.
+
+## Changes compared to upstream
+
+1. Continuous (htt)ping support (infinite pings) - see #1 
+    * In some cases, application needs to run infinitely. You can read more about Continuous Ping [here](https://www.ionos.com/digitalguide/server/tools/continuous-ping/) .
+
+2. Change - Don't sleep after the last needed ping - see #2  
+    * The change in this Push Request removes unnecessary **sleep 1s** , making user wait less. This is the same behavior as in standard ping.
+
+3. **Proxy (proxification) support** - see #3 
+    * Adds support for proxies (Google Go does not support it out-of-the-box, so I utilized) [rapid7/go-get-proxied](https://github.com/rapid7/go-get-proxied)
+        * [https://github.com/rapid7/go-get-proxied](https://github.com/rapid7/go-get-proxied) was therefore added to dependencies.
+    * Add new flag - `noProxy` - to ignore proxies and connect directly
+
+4. Implement timeout flag - see #4 
+
+
+Additionally, I added a much better `.gitignore`, updated flags in readme, and added an (IRL) example in Readme that made all these changes possible and neccessary.
 
 ### Latest release
 
@@ -12,9 +33,9 @@ Golang >1.3 ::  http.Client Timeout wasn't available in previous versions
 External library requirement: [github.com/montanaflynn/stats](https://github.com/montanaflynn/stats)
 
 ### Installing
-#### From source
+#### From **fork** source
 ```
-go install github.com/pjperez/httping@latest
+go install github.com/TAbdiukov/httping-proxy@latest
 ```
 
 You'll then find httping.exe in your $GOPATH/bin directory

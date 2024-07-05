@@ -1,6 +1,6 @@
 # httping-proxy
 
-**this is a fork of [pjperez/httping/](https://github.com/pjperez/httping/)** which adds support for proxies and other useful features.
+**httping-proxy** is a **`httping`** fork, which adds support for proxies and other useful features.
 
 httping - A tool to measure RTT on HTTP/S requests 
 

@@ -26,7 +26,7 @@ import (
 	"github.com/rapid7/go-get-proxied/proxy"
 )
 
-const httpingVersion = "0.9.1"
+const httpingVersion = "0.10.0_proxy_fork"
 
 //const jsonResults = true
 

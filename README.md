@@ -11,6 +11,8 @@ This tool should be able to run on Windows, Linux and Mac OS/X, but it has only 
 1. **Proxy (proxification) support** - see [#3](https://github.com/TAbdiukov/httping-proxy/pull/3)
     * Adds support for proxies (Google Go does not support it out-of-the-box, so I utilized) [rapid7/go-get-proxied](https://github.com/rapid7/go-get-proxied)
         * [https://github.com/rapid7/go-get-proxied](https://github.com/rapid7/go-get-proxied) was therefore added to dependencies.
+		* GetProxy is supplemented with httping-specific logic
+	* Adds printing of proxy information in pings
     * Add new flag - `noProxy` - to ignore proxies and connect directly
 
 2. Continuous (htt)ping support (infinite pings) - see [#1](https://github.com/TAbdiukov/httping-proxy/pull/1) 

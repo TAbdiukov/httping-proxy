@@ -1,5 +1,7 @@
 # httping-proxy
 
+### Starting httping 0.11.0, fork no longer relevant - these changes are now part of [official httping 0.11.0](https://github.com/pjperez/httping/releases/tag/0.11.0)
+
 **httping-proxy** is a **`httping`** fork, which adds support for proxies and other useful features.
 
 httping - A tool to measure RTT on HTTP/S requests 
